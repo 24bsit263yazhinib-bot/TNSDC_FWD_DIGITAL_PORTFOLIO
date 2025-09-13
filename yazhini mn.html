@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Agriculture using IoT</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f9f4;
+      color: #333;
+    }
+
+    header {
+      background: #2e8b57;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 1rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    nav {
+      background: #1f5c3f;
+      padding: 0.5rem;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #2e8b57;
+      margin-bottom: 0.5rem;
+    }
+
+    .card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background: #2e8b57;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    .contact {
+      line-height: 1.6;
+    }
+
+    button {
+      background: #2e8b57;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background: #246b46;
+    }
+
+    .iot-data {
+      font-weight: bold;
+      color: #1f5c3f;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Smart Agriculture using IoT</h1>
+    <p>Enhancing Farming with Technology</p>
+  </header>
+
+  <nav>
+    <a href="#overview">Overview</a>
+    <a href="#features">Features</a>
+    <a href="#simulation">Live Simulation</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="overview">
+    <div class="card">
+      <h2>Project Overview</h2>
+      <p>
+        Smart Agriculture using IoT helps farmers monitor soil moisture, temperature,
+        and humidity levels in real-time. This system ensures optimal crop growth,
+        water conservation, and improved productivity by using IoT sensors and
+        automation.
+      </p>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="card">
+      <h2>Key Features</h2>
+      <ul>
+        <li>🌱 Soil moisture monitoring</li>
+        <li>🌡️ Temperature and humidity tracking</li>
+        <li>💧 Automated irrigation system</li>
+        <li>📊 Real-time data visualization</li>
+        <li>📱 Remote monitoring via web/app</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="simulation">
+    <div class="card">
+      <h2>IoT Live Simulation</h2>
+      <p>Click the button below to simulate IoT sensor data:</p>
+      <p class="iot-data" id="sensorData">Soil Moisture: --% | Temp: --°C | Humidity: --%</p>
+      <button onclick="generateData()">Generate Data</button>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="card">
+      <h2>Contact Details</h2>
+      <p class="contact">
+        <strong>Name:</strong> Yazhini B <br>
+        <strong>Email:</strong> <a href="mailto:24bsit263yazhinib@skacas.ac.in">24bsit263yazhinib@skacas.ac.in</a>
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Smart Agriculture IoT Project | Developed by Yazhini B</p>
+  </footer>
+
+  <script>
+    function generateData() {
+      const moisture = Math.floor(Math.random() * 100);
+      const temp = (20 + Math.random() * 15).toFixed(1);
+      const humidity = Math.floor(Math.random() * 100);
+
+      document.getElementById("sensorData").innerText =
+        Soil Moisture: ${moisture}% | Temp: ${temp}°C | Humidity: ${humidity}%;
+    }
+  </script>
+</body>
+</html>
